@@ -63,11 +63,6 @@ header{
         justify-content: space-between;
         height: $header__main__content-height;
 
-        @include respond-above(sm){
-            padding: 0px 70px;
-            box-sizing: border-box;
-        }
-
         div.header__icon{
             width: $header__icon__size;
             min-height: $header__icon__size;
@@ -75,8 +70,7 @@ header{
             background-position: center;
             background-repeat: no-repeat;
             background-size: 100%;
-            margin: 0px 10px;
-            
+            // margin: 0px 10px;
 
             img{
                 width: 100%;
@@ -85,10 +79,13 @@ header{
             }
 
             &.header__icon-menu{
+                margin-right: 10px;
                 @include respond-above(md){ display: none; }
             }
 
-            &.header__icon-search{}
+            &.header__icon-search{
+                @include respond-above(md){ margin-right: 30px; }
+            }
 
             &.header__icon-shoppingbag{
                 position: relative;
@@ -96,24 +93,22 @@ header{
                 &:after{
                     content: attr(cart-count);
                     position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: -25px;
+                    top: 52%; 
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                     width: 20px;
                     height: 20px;
-                    border-radius: 20px;
-                    // background-color: rgba(222, 172, 207, .5);
-                    // color: #FFF;
-                    font-size: 15px;
+                    font-size: 12px;
                     text-align: center;
                     font-weight: 600;
                     line-height: 20px;
                 }
+
+                @include respond-above(md){ margin-left: 30px; }
             }
         }
 
         div.menu-header-menu-left-container{
-            margin-left: 15px;
             display: none;
 
             @include respond-above(md){
@@ -122,7 +117,6 @@ header{
         }
 
         div.menu-header-menu-right-container{
-            margin-right: 15px;
             display: none;
 
             @include respond-above(md){
@@ -197,10 +191,6 @@ header{
             height: 100%;
             display: flex;
             align-items: center;
-            
-            div.menu-header-menu-left-container{
-            
-            } 
         }
        
         div.header__logo{
@@ -234,10 +224,6 @@ header{
             @include respond-above(sm){
                 padding-right: 0px;
             }
-
-            div.menu-header-menu-right-container{
-            
-            } 
         }
     }
 
@@ -277,23 +263,6 @@ header{
                     font-size: 20px;
                     color: lightgrey;
                 }
-            }
-        }
-
-        div.searchbar__close{
-            display: none;
-            height: 20px;
-            width: 20px;
-            background-image: $header__icon-cross;
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 80;
-            cursor: pointer;
-
-            @include respond-above(md){
-                display: block;
             }
         }
     }
@@ -466,10 +435,10 @@ div.aws-search-result{
     width: 100% !important;
     box-sizing: border-box;
     border: none;
-    padding: 10px 0px 10px 0px;
+    padding: 0px 10px;
 
     @include respond-above(sm){
-        padding: 10px 35px 10px 35px;
+        padding: 10px 70px 10px 70px;
     }
 
     @include respond-above(lg){

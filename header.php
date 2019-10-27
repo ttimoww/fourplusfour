@@ -36,33 +36,34 @@
     </p> -->
     </div>
     <header>
-        <div class="header__main__content">
-            <div class="header__nav__left">
-                <div class="header__icon header__icon-menu toggle-menu">
-                    <img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/hamburger.svg" alt="Open & Close Menu">
-                </div>
-                <div class="header__icon header__icon-search" id="toggle-searchbar">
-                    <img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/search.svg" alt="Open Search Menu">
-                </div>
-                <?php wp_nav_menu( array( 'theme_location' => 'header_menu_left' ) ) ?>
-            </div>
-            <div class="header__logo">
-            <a href="<?php echo get_bloginfo( 'wpurl' );?>">
-                <img src="<?php bloginfo('template_directory'); ?>/dist/images/logos/logo_header.svg" alt="Four Plus Four Clothing">
-            </a>
-            </div>
-            <div class="header__nav__right">
-                <?php wp_nav_menu( array( 'theme_location' => 'header_menu_right' ) ) ?>
-                <a href="<?php echo wc_get_cart_url(); ?>">
-                    <div class="header__icon header__icon-shoppingbag" cart-count="<?php echo sprintf (_n('%d','%d',WC()->cart->get_cart_contents_count()),WC()->cart->get_cart_contents_count());?>">
-                        <img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/shoppingbag.svg" alt="Shoppingbag">
+        <div class="main-container">
+            <div class="header__main__content">
+                <div class="header__nav__left">
+                    <div class="header__icon header__icon-menu toggle-menu">
+                        <img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/hamburger.svg" alt="Open & Close Menu">
                     </div>
+                    <div class="header__icon header__icon-search" id="toggle-searchbar">
+                        <img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/search.svg" alt="Open Search Menu">
+                    </div>
+                    <?php wp_nav_menu( array( 'theme_location' => 'header_menu_left' ) ) ?>
+                </div>
+                <div class="header__logo">
+                <a href="<?php echo get_bloginfo( 'wpurl' );?>">
+                    <img src="<?php bloginfo('template_directory'); ?>/dist/images/logos/logo_header.svg" alt="Four Plus Four Clothing">
                 </a>
+                </div>
+                <div class="header__nav__right">
+                    <?php wp_nav_menu( array( 'theme_location' => 'header_menu_right' ) ) ?>
+                    <a href="<?php echo wc_get_cart_url(); ?>">
+                        <div class="header__icon header__icon-shoppingbag" cart-count="<?php echo sprintf (_n('%d','%d',WC()->cart->get_cart_contents_count()),WC()->cart->get_cart_contents_count());?>">
+                            <img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/shoppingbag.svg" alt="Shoppingbag">
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="searchbar">
             <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
-            <div class="searchbar__close" id="close-searchbar"></div>
         </div>
 
         <div class="overlay"></div>
