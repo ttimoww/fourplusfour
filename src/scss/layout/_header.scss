@@ -57,6 +57,10 @@ header{
     background-color: #fff;
     z-index: 99;
     // box-shadow: 0 11px 30px rgba(160,170,180,.1);
+    border-bottom: 3px solid transparent;
+    transition: all .3s;
+    box-sizing: border-box;
+
 
     div.header__main__content{
         display: flex;
@@ -402,6 +406,11 @@ header{
             }
         }
         
+    }
+
+    // Styles when page is scrolled down
+    &.page-scrolled{
+        border-bottom: 5px solid #f2f2f2;
     }
 
     // Styles when searchbar is open

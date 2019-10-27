@@ -42,6 +42,7 @@ body.archive{
         list-style: none;
         display: grid;
         grid-template-columns: 1fr;
+        gap: 30px;
 
         @include respond-above(xs){
             grid-template-columns: 1fr 1fr;
@@ -50,16 +51,27 @@ body.archive{
 
         @include respond-above(sm){
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 60px;
+            gap: 50px;
         }
 
         @include respond-above(md){
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 80px;
+            gap: 60px;
+        }
+
+        @include respond-above(md){
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 60px;
         }
 
         li{
             width: 100%;
+            padding: 0px 20px;
+            box-sizing: border-box;
+
+            @include respond-above(xs){
+                padding: 0px;
+            }
 
             a{
                 width: 100%;

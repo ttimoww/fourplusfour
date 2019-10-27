@@ -25,16 +25,15 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 
-
-	<li class="product">
-		<a href="<?php echo $product->get_permalink(); ?>">
-			<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-			<p>
-				<span class="product__title"><?php echo $product->get_title(); ?></span>
-				<span class="product__title">€ <?php echo $product->get_price(); ?></span>
-			</p>
-		</a>
-	</li>
+<li class="product">
+	<a href="<?php echo $product->get_permalink(); ?>">
+		<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+		<p>
+			<span class="product__title"><?php echo $product->get_title(); ?></span>
+			<span class="product__title">€ <?php echo $product->get_price(); ?></span>
+		</p>
+	</a>
+</li>
 
 
 

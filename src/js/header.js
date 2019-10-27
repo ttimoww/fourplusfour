@@ -49,5 +49,24 @@ jQuery(document).ready(function($){
         $(this).parent().hasClass('opened') ? $(this).parent().removeClass('opened') : $(this).parent().addClass('opened');
         e.stopPropagation();
     })
+
+    // Toggle scrolled class to header
+    var header = $("header");
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 150) {
+        header.addClass('page-scrolled');
+    } else {
+        header.removeClass('page-scrolled');
+    }
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 150) {
+            header.addClass('page-scrolled');
+        } else {
+            header.removeClass('page-scrolled');
+        }
+    });
 });
 

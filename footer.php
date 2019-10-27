@@ -2,7 +2,7 @@
 <footer>
     <div class="main-container">
         <div class="footer__newsletter">
-            <p class="join" >Join Four Plus Four!</p>
+            <p class="join" >Keep In Touch With Us!</p>
             <p>Ontvang de laatste trends en <span class="bold">speciale aanbiedingen</span> in je inbox en wees als eerst op de hoogte van nieuwe items!</p>
             <!-- Begin Mailchimp Signup Form -->
                 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">

@@ -31,9 +31,11 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
+
 <div class="breadcrumbs">
 	<?php woocommerce_breadcrumb(); ?>
 </div>
+
 <div class="product" id="product-<?php the_ID(); ?>">
 
 	<div class="product__container">

@@ -41,6 +41,7 @@
 	<div class="breadcrumbs">
 		<?php woocommerce_breadcrumb(); ?>
 	</div>
+	
 </div>
 
 <?php
