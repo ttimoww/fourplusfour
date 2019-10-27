@@ -1,0 +1,22 @@
+@keyframes homepage-line-anim{
+  to{
+      stroke-dashoffset: 0;
+  }
+}
+
+@keyframes homepage-fill{
+  from{
+      fill: rgba(222, 172, 207, 0);
+  }
+  to{
+      fill: rgba(222, 172, 207, 1);
+  }
+}
+
+@keyframes homepage-fill2{
+  to{
+      opacity: 1;
+  }
+}
+
+  

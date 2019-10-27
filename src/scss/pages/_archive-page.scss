@@ -1,0 +1,115 @@
+body.archive{
+    h1.page-title{
+        display: none;
+    }
+
+    nav.archive-nav{
+        ul.menu{
+            list-style: none;
+            padding: 0px;
+            margin: 10px 0px 0px 0px;
+            display: flex;
+            justify-content: center;
+            font-size: 13px;
+    
+            li{
+                margin: 0px 15px;
+                letter-spacing: .5s;
+
+                &.current-menu-item{
+                    a{
+                        font-weight: bold;
+                    }
+                }
+    
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    ul.archive-products{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px 10px;
+        list-style: none;
+
+        li{
+            width: 100%;
+            margin: 0px 0px 30px 0px;
+            box-sizing: border-box;
+            padding: 0px 30px; 
+
+            @include respond-above(xs){
+                margin: 0px 0px 20px 0px; 
+                margin-bottom: 45px;
+                width: 50%;
+            }
+    
+            @include respond-above(md){
+                width: 33.33%;
+            }
+    
+            @include respond-above(lg){
+                width: 25% ;
+                
+            }
+
+            a{
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                position: relative;
+                
+                &::after{
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(255,255,255,.0);
+                    transition: background .3s;
+                    z-index: 10;
+                }
+
+                img{
+                    width: 100%;
+                }
+
+                p{
+                    opacity: 0;
+                    margin: 0px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, calc(-50% + 20px));
+                    text-align: center;
+                    z-index: 12;
+                    transition: all .3s;
+                    font-weight: 400;
+                    letter-spacing: .5px;
+                    text-transform: uppercase;
+                    
+                    span{
+                        display: block;
+                    }
+                }
+
+                &:hover{
+                    &::after{
+                        background: rgba(255,255,255,.5);
+                    }
+
+                    p{
+                        opacity: 1;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+
+}

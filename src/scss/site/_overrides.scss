@@ -1,0 +1,57 @@
+// Checkout
+body.woocommerce-checkout{
+    input.input-text{
+        height: 40px;
+        width: 100px;
+        line-height: 100%;
+        border: 1px solid rgba(0,0,0,.1);
+        padding: 8px 8px;
+        border-radius: 0px !important;
+    }
+
+    select{
+        border: 1px solid rgba(0,0,0,.1) !important;
+        border-radius: 0px !important;
+    }
+
+    button{
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+}
+
+// One succes
+body.woocommerce-order-received{
+    p.woocommerce-thankyou-order-received{
+        margin: 30px 0px !important;
+
+        @include respond-above(sm){
+            text-align: center
+        }
+    }
+
+    ul{
+        margin: 15px 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+
+        @include respond-above(sm){
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        li{
+            float: none !important;
+            margin-bottom: 10px;
+            border: none;
+        }
+    }
+
+    address{
+        padding: 10px !important;
+        box-sizing: border-box;
+        border: 1px solid rgba(0,0,0,.1) !important;
+    }
+}
+

@@ -1,0 +1,30 @@
+div.notice{
+    padding: 5px 0px 5px 20px;
+    background-position: left center;
+    background-size: 10px;
+    background-repeat: no-repeat;
+
+    &.notice-error, &.notice-notice{
+        background-image: url(../images/icons/cross.svg);
+        
+        a{
+            display: none;
+        }
+    }
+
+    &.notice-succes{
+        background-image: url(../images/icons/tick.svg);
+        a{
+            display: none;
+        }
+    }
+}
+
+// Make the notices on product page go to side of screen
+body.single-product{
+    div.woocommerce-notices-wrapper{
+        div.main-container{
+            margin: 0px;
+        }
+    }
+}

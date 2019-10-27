@@ -1,0 +1,56 @@
+body.home{
+
+    section.homepage__landing{
+        width: 100%;
+        height: calc(100vh - 95px);
+        position: relative;
+        overflow: hidden;
+
+        div.homepage__landing__images{
+            width: 100%;
+            height: 100%;
+
+            img{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 8;
+
+                &.activeslide{
+                    z-index: 10;
+                }
+
+                &.last-activeslide{
+                    z-index: 9;
+                }
+            }
+        }
+
+        div.homepage__landing_social{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+
+            img{
+                width: 20px;
+                margin: 0px 10px;
+            }
+        }
+    }
+
+    section.info{
+        height: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        position: absolute;
+
+        p.text-slide{
+            display: inline;
+        }
+    }
+}

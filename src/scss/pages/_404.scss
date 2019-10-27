@@ -1,0 +1,43 @@
+body.error404{
+    section.page404{
+        margin-bottom: 40px;
+        min-height: calc(100vh - 400px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div.page404__container{
+            img{
+                width: 100%;
+                max-width: 300px;
+                display: block;
+                margin: 30px auto;
+    
+            }
+    
+            p{
+                text-align: center;
+            }
+    
+            a{
+                text-decoration: none;
+            }
+    
+            div.storelinks{
+                margin-top: 30px;
+                display: flex;
+                justify-content: center;
+    
+                a{
+                    padding: 5px 10px;
+                    background-color: #000;
+                    color: #fff;
+                    width: 70px;
+                    text-align: center;
+                    margin: 0px 10px;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

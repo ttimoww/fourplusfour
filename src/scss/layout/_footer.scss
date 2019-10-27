@@ -1,0 +1,93 @@
+footer{
+    margin-top: 50px;
+    background-color: #f2f2f285;
+
+    div.main-container{
+       div.footer__grid{
+            padding: 30px 10px 0px 10px;
+
+            @include respond-above(xs){
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows:  repeat(2, 1fr);
+                grid-row-gap: 20px;
+            }
+
+            @include respond-above(sm){
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr;
+                margin-bottom: 10px;
+            }
+
+            div.footer__section{
+                margin-bottom: 30px;
+
+                @include respond-above(xs){
+                    margin-bottom: 0px;
+                }
+            }
+
+            p.title{
+                font-weight: bold;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            ul{
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                display: block;
+
+                li{
+                    margin: 10px 0px;
+                    display: block;
+                    color: #666666 !important;
+                    font-size: 13px;
+
+                    a{
+                        text-decoration: none;
+                        color: #666666 !important;
+                        font-size: 13px;
+                    }
+                }
+            }
+       } 
+    }
+
+    div.footer__icons{
+        height: 50px;
+        
+        div.footer__icons__container{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div.line{
+                width: 0px;
+                height: 30px;
+                background-color: #666666;
+            }
+
+            a{
+                display: flex;
+                align-content: center;
+            }
+
+            img{
+                height: 22px;
+                width: 22px;
+                margin: 0px 25px;
+            }
+        }
+    }
+
+    div.footer__end{
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e6e4e4 !important;
+    }
+}
