@@ -83,7 +83,7 @@
     }
     
     add_action( 'woocommerce_before_checkout_form', 'remove_checkout_coupon_form', 9 );
-    // remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+    remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
     remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );
     add_action( 'get_header', 'sk_conditionally_remove_wc_assets' );
     add_action('wp_enqueue_scripts','wpb_load_woocommerce');
