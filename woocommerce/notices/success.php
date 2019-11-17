@@ -26,13 +26,15 @@ if ( ! $messages ) {
 ?>
 
 
-<div class="main-container">
-	<div class="notice notice-succes" role="alert">
-		<?php foreach ( $messages as $message ) : ?>
-			<?php
-				echo wc_kses_notice( $message );
-			?>
-		<?php endforeach; ?>
-	</div>
+
+<div class="notice notice-succes" role="alert">
+	<?php foreach ( $messages as $message ) : ?>
+		<?php
+			echo wc_kses_notice( $message );
+		?>
+	<?php endforeach; ?>
+	<div class="timer"></div>
 </div>
+
+
 

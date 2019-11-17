@@ -23,7 +23,7 @@ input[type="button"],
 input[type="submit"],
 .input-checkbox {
 
-    &:not(#terms){
+    &:not(#terms):not(#ship-to-different-address-checkbox){
         -webkit-appearance: none !important;
         border-radius: 0 !important;
     }

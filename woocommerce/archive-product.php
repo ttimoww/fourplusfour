@@ -17,17 +17,20 @@
 
 	defined( 'ABSPATH' ) || exit;
 	get_header( 'shop' );
+
 ?>
 
-<?php 
-		if ( is_product_category() ){
-			global $wp_query;
 
-			$cat = $wp_query->get_queried_object();
-			$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
-			$image = wp_get_attachment_url( $thumbnail_id ); 
-		}
-	?>
+
+<?php 
+	if ( is_product_category() ){
+		global $wp_query;
+
+		$cat = $wp_query->get_queried_object();
+		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
+		$image = wp_get_attachment_url( $thumbnail_id ); 
+	}
+?>
 
 <div class="main-container">
 	<div class="archive__banner" style="background-image: url(<?php echo $image ?>)">
@@ -36,12 +39,12 @@
 		</div>
 	</div>
 
-	
-
-	<div class="breadcrumbs">
-		<?php woocommerce_breadcrumb(); ?>
-	</div>
-	
+	<div class="archive__info">
+		<div class="archive__info__breadcrumbs">
+			<?php woocommerce_breadcrumb(); ?>
+		</div>
+		<?php do_action( 'woocommerce_before_shop_loop' ); ?>
+	</div>	
 </div>
 
 <?php
@@ -54,7 +57,7 @@
 		 * @hooked woocommerce_result_count - 20
 		 * @hooked woocommerce_catalog_ordering - 30
 		 */
-		do_action( 'woocommerce_before_shop_loop' );
+		
 
 		woocommerce_product_loop_start();
 

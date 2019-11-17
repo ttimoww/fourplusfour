@@ -1,5 +1,33 @@
+div.empty-cart{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p{
+        text-align: center;
+    }
+
+    div.storelinks{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+
+        a{
+            padding: 5px 10px;
+            background-color: #000;
+            color: #fff;
+            width: 70px;
+            text-align: center;
+            margin: 0px 10px;
+            font-size: 13px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+}
+
 body.woocommerce-cart{
-    section.cart{
+     section.cart{
         margin-top: 30px;
 
         div.cart__container{
