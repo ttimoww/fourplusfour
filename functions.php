@@ -14,16 +14,6 @@
             // Mobile Menu
             'mobile_menu' => __( 'Mobile Menu' ),
 
-            // Category Pages
-            'tops_category_page' => __( 'Tops Category Page' ),
-            'tshirts_category_page' => __( 'T Shirts Category Page' ),
-            'sweaters_category_page' => __( 'Sweaters Category Page' ),
-            'hoodies_category_page' => __( 'Hoodies Category Page' ),
-            
-            'footwear_category_page' => __( 'Footwear Category Page' ),
-            'sneakers_category_page' => __( 'Sneakers Category Page' ),
-            'sokken_category_page' => __( 'Sokken Category Page' ),
-
             // Footer
             'footer_menu_storelinks' => __( 'Footer Menu Storelinks' ),
             'footer_menu_information' => __( 'Footer Menu Information' )
