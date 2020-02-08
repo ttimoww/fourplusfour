@@ -49,9 +49,11 @@
     <div class="footer__payment_methods">
         <img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/ideal.svg" alt="Four Plus Four Ideal betaal methode">
         <img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/paypal.svg" alt="Four Plus Four PayPal betaal methode"></a>
-    </div>
-
-        
+        <img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/postnl.png" alt="Four Plus Four PostNL verzending"></a>
+    </div>  
+    <div class="footer__info">
+       <p>76204235 – NL860544680B01</p>   
+    </div>  
 </footer>
 </body>
 </html>
@@ -63,13 +65,3 @@
 <nav>
     <?php wp_nav_menu( array( 'theme_location' => 'footer_menu_information' ) ) ?>
 </nav>
-
-<div class="footer__icons__container">
-            <a href=""><img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/facebook.svg" alt="Four Plus Four Facebook"></a>
-            <a href=""><img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/instagram.svg" alt="Four Plus Four Instagram"></a>
-            <div class="line"></div>
-            <img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/ideal.svg" alt="Four Plus Four Ideal betaal methode">
-            <img src="<?php bloginfo('template_directory'); ?>/dist/images/icons/paypal.svg" alt="Four Plus Four PayPal betaal methode"></a>
-        </div>
-
-<li>KVK: 76204235</li> -->

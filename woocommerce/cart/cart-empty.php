@@ -23,8 +23,10 @@ if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 	<div class="empty-cart">
 		<p>Je winkelmand is momenteel leeg.</p>
 		<div class="storelinks">
-                <a href="/category/tops">Tops</a>
-                <a href="/category/footwear/">Footwear</a>
-            </div>
+			<a href="/collectie/tops/">Tops</a>
+			<a href="/collectie/sneakers/">sneakers</a>
+			<a href="/collectie/sokken/">sokken</a>
+        </div>
 	</div>
+</div
 <?php endif; ?>
