@@ -72,6 +72,7 @@
         remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
     }
     
+    add_filter('woocommerce_show_variation_price', function() {return true;});
     add_action( 'woocommerce_before_checkout_form', 'remove_checkout_coupon_form', 9 );
     remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
     remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );

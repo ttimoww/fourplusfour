@@ -1,9 +1,17 @@
 body.single-product{
 
     // Store notices
-    div.woocommerce-notices-wrapper{
-        width: calc(100% - 30px);
-        margin-left: 15px;
+    // div.woocommerce-notices-wrapper{
+    //     width: calc(100% - 30px);
+    //     margin-left: 15px;
+    // }
+
+    a.reset_variations{
+        display: none !important;
+    }
+
+    div.woocommerce-variation-price{
+
     }
 
     div.breadcrumbs{
@@ -110,109 +118,11 @@ body.single-product{
 
                 div.product__info-small__cart{
                     padding: 0px 15px;
+
+                    // Variations Form
                     form{
                         .quantity{
                             display: none !important;
-                        }
-    
-                        table.variations{
-                            margin: 20px 0px 10px 0px;
-    
-                            td.label{
-                                color: #bbbbbb;
-                                text-transform: uppercase;
-                                font-size: 12px;
-                                padding: 0px 10px 0px 0px;   
-                                line-height: inherit; 
-                                vertical-align: top; 
-                                display: none;                      
-                            }
-    
-                            td.value{
-                                display: flex;
-                                flex-wrap: wrap;
-    
-                                div{
-                                    width: 40px;
-                                    height: 40px;
-                                    position: relative;
-                                    margin: 0px 10px 10px 0px;
-                                    
-    
-                                    &:last-child{
-                                        margin: 0px 0px 10px 0px;
-                                    }
-    
-                                    input{
-                                        -webkit-appearance: none;
-                                        -moz-appearance: none;
-                                        -ms-appearance: none;
-                                        -o-appearance: none;
-                                        appearance: none;
-                                        cursor: pointer;
-                                        position: absolute;
-                                        width: 100%;
-                                        height: 100%;
-                                        top: 0px;
-                                        left: 0px;
-                                        margin: 0px;
-                                        border-radius: 0 !important;
-                                        z-index: 9;
-                                        border: none;
-                                        box-shadow: none;
-                                        background-color: none;
-                                        border: 1px solid #ccc;
-                                        transition: all .3s;
-    
-                                        &:checked{
-                                            background-color: #000000;
-                                            color: #fff;
-                                            border: none;
-    
-                                        }
-                                    }
-    
-                                    label{
-                                        position: absolute;
-                                        left: 50%;
-                                        top: 50%;
-                                        transform: translate(-50%, -50%);
-                                        pointer-events: none;
-                                        z-index: 10;
-                                        font-weight: normal;
-                                        text-transform: uppercase;
-                                    }
-                                }
-    
-                                a.reset_variations{
-                                    width: 40px;
-                                    height: 40px;
-                                    position: relative;
-                                    margin: 0px 10px 10px 0px;
-                                    color: #FFFFFF;
-                                    z-index: 13;
-                                    opacity: .5;
-                                    transition: opacity .3s;
-    
-                                    &::after{
-                                        content: '';
-                                        position: absolute;
-                                        top: 0px;
-                                        left: 0px;
-                                        width: 100%;
-                                        height: 100%;
-                                        background-image: url(../images/icons/cross.svg);
-                                        background-size: 15px;
-                                        background-repeat: no-repeat;
-                                        background-position: center;
-                                        z-index: 14;
-                                    }
-    
-                                    &:hover{
-                                        opacity: 1;
-                                    }
-                                }
-                            }
                         }
     
                         div.single_variation_wrap{
@@ -292,6 +202,7 @@ body.single-product{
                 }
 
                 div.price{
+                    margin-bottom: 20px;
                     p{
                         font-size: 20px;
                         font-weight: 400;
@@ -299,110 +210,10 @@ body.single-product{
                     }
                 }
 
+                // Variations Form
                 form{
                     .quantity{
                         display: none !important;
-                    }
-
-                    table.variations{
-                        margin: 20px 0px 10px 0px;
-
-                        td.label{
-                            color: #bbbbbb;
-                            text-transform: uppercase;
-                            font-size: 12px;
-                            padding: 0px 10px 0px 0px;   
-                            line-height: inherit;  
-                            vertical-align: top;  
-                            display: none;                    
-                        }
-
-                        td.value{
-                            display: flex;
-                            flex-wrap: wrap;
-
-                            div{
-                                width: 40px;
-                                height: 40px;
-                                position: relative;
-                                margin: 0px 10px 10px 0px;
-                                
-
-                                &:last-child{
-                                    margin: 0px 0px 10px 0px;
-                                }
-
-                                input{
-                                    -webkit-appearance: none;
-                                    -moz-appearance: none;
-                                    -ms-appearance: none;
-                                    -o-appearance: none;
-                                    appearance: none;
-                                    cursor: pointer;
-                                    position: absolute;
-                                    width: 100%;
-                                    height: 100%;
-                                    top: 0px;
-                                    left: 0px;
-                                    margin: 0px;
-                                    border-radius: 0 !important;
-                                    z-index: 9;
-                                    border: none;
-                                    box-shadow: none;
-                                    background-color: none;
-                                    border: 1px solid #ccc;
-                                    transition: all .3s;
-
-                                    &:checked{
-                                        background-color: #000000;
-                                        color: #fff;
-                                        border: none;
-
-                                    }
-                                }
-
-                                label{
-                                    position: absolute;
-                                    left: 50%;
-                                    top: 50%;
-                                    transform: translate(-50%, -50%);
-                                    pointer-events: none;
-                                    z-index: 10;
-                                    font-weight: normal;
-                                    text-transform: uppercase;
-                                    white-space: nowrap;
-                                }
-                            }
-
-                            a.reset_variations{
-                                width: 40px;
-                                height: 40px;
-                                position: relative;
-                                margin: 0px 10px 10px 0px;
-                                color: #FFFFFF;
-                                z-index: 13;
-                                opacity: .5;
-                                transition: opacity .3s;
-
-                                &::after{
-                                    content: '';
-                                    position: absolute;
-                                    top: 0px;
-                                    left: 0px;
-                                    width: 100%;
-                                    height: 100%;
-                                    background-image: url(../images/icons/cross.svg);
-                                    background-size: 15px;
-                                    background-repeat: no-repeat;
-                                    background-position: center;
-                                    z-index: 14;
-                                }
-
-                                &:hover{
-                                    opacity: 1;
-                                }
-                            }
-                        }
                     }
 
                     div.single_variation_wrap{
@@ -451,6 +262,69 @@ body.single-product{
                     }
                 }
             }            
+        }
+    }
+
+    // Styles for variation swatches
+    table.variations{
+        td.label{
+            display: none;
+        }
+
+        td.woo-variation-items-wrapper{
+            ul{
+                list-style: none;
+                margin: 0px 0px 15px 0px;
+                padding: 0px;
+                display: flex;
+                flex-wrap: wrap;
+
+                li{
+                    border: 1px solid #e0e0e0;
+                    width: 40px;
+                    height: 40px;
+                    margin: 0px 8px 8px 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    position: relative;
+                    transition: background-color .3s;
+
+                    span{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        white-space: nowrap;
+                    }
+
+                    &.selected:not(.image-variable-item){
+                        background-color: #000000;
+                        span{
+                            color: #FFFFFF;
+                        }
+                    }
+                    &.image-variable-item{
+                        border: 2px solid transparent;
+                    }
+                    &.selected.image-variable-item{
+                        border: 2px solid black;
+                    }
+                }
+
+                &.image-variable-wrapper{
+
+                }
+
+                &.color-variable-wrapper{
+                    li{
+                        span{
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
         }
     }
 }

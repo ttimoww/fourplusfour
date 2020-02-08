@@ -34,7 +34,7 @@ body.woocommerce-cart{
             display: flex;
             flex-direction: column;
 
-            @include respond-above(xs){
+            @include respond-above(sm){
                 flex-direction: row;
             }
 
@@ -43,12 +43,12 @@ body.woocommerce-cart{
                 margin-bottom: 20px;
 
                 @include respond-above(xs){
-                    flex: 1;
+                    flex: 2;
                     margin-bottom: 0px;
                 }
 
                 h1{
-                    margin: 0px 0px 10px 0px;
+                    margin: 0px 0px 20px 0px;
 
                     @include respond-above(xs){
                         margin: 0px 0px 20px 0px;
@@ -61,19 +61,34 @@ body.woocommerce-cart{
                     display: flex;
                     justify-content: flex-start;
                     position: relative;
-                    margin: 0px 0px 10px 0px;
+                    margin: 0px 0px 40px 0px;
+                    flex-direction: row-reverse;
 
                     @include respond-above(xs){
                         margin: 0px 0px 20px 0px;
+                        flex-direction: row;
+                    }
+
+                    &:last-of-type{
+                        margin-bottom: 50px;
                     }
 
                     div.cart-item__thumbnail{
+                        width: 30%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        @include respond-above(xs){
+                            width: auto;
+                        }
+
                         a{
                             img{
                                 width: 100%;
                                 height: auto !important;
                                 max-width: 100px;
-                                min-width: 100px;
+                                // min-width: 100px;
 
                                 @include respond-above(sm){
                                     max-width: 150px;
@@ -84,8 +99,13 @@ body.woocommerce-cart{
                     }
 
                     div.cart-item__info{
-                        padding: 0px 0px 0px 15px;
+                        width: 70%;
                         position: relative;
+
+                        @include respond-above(xs){
+                            width: auto;
+                            padding: 0px 0px 0px 15px;
+                        }
 
                         div.name{
                             margin-bottom: 10px;
@@ -97,7 +117,13 @@ body.woocommerce-cart{
 
                             .variation{
                                 margin-top: 10px;
-                                display: flex;
+                                display: grid;
+                                grid-template-columns: 1fr 2fr;
+                                row-gap: 10px;
+
+                                dd{
+                                    margin: 0px;
+                                }
                             }
                         }
 
@@ -108,7 +134,6 @@ body.woocommerce-cart{
                         div.qty{
                             display: flex;
                             align-content: center;
-                            margin-bottom: 10px;
 
                             input{
                                 border: none;
@@ -126,7 +151,8 @@ body.woocommerce-cart{
 
                                 &[type=button]{
                                     background-color: rgb(236, 236, 236);
-                                    border-top: 2px solid rgb(236, 236, 236);;
+                                    border-top: 2px solid rgb(236, 236, 236);
+                                    cursor: pointer;
                                 }
 
                                 &:not(:last-child){
@@ -138,7 +164,11 @@ body.woocommerce-cart{
                         div.cart-item__remove{
                             position: absolute;
                             bottom: 10px;
-                            left: 15px;
+                            right: 15px;
+
+                            @include respond-above(sm){
+                                left: 15px;
+                            }
         
                             a{
                                 text-decoration: none;
