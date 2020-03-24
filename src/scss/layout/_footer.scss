@@ -94,9 +94,11 @@ footer{
         display: flex;
         justify-content: center;
         padding-bottom: 30px;
+        max-height: 55px !important;
         img{
             width: 25px;
             margin: 0px 15px;
+            max-height: 25px !important;
         }
     }
 

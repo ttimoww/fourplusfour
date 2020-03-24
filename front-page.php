@@ -1,9 +1,8 @@
 <?php get_header() ?>
 <section class="homepage__landing">
     <div class="homepage__landing__images">
-        <img class="activeslide" src="https://fourplusfour.nl/wp-content/uploads/2019/09/slider1.jpg" alt="">
-        <img src="https://fourplusfour.nl/wp-content/uploads/2019/09/slider2.jpg" alt="">
-        <img src="https://fourplusfour.nl/wp-content/uploads/2019/09/slider3.jpg" alt="">
+        <img class="activeslide" src="https://fourplusfour.nl/wp-content/uploads/2020/01/four-plus-four-nike-airforce-1-custom-comme-des-garcons.jpg" alt="">
+        <img src="https://fourplusfour.nl/wp-content/uploads/2020/02/Four_Plus_Four_Smiley_Hoodie.jpg" alt="">
     </div>
     <div class="homepage__landing_social">
         <a href="https://instagram.com/fourplusfournl" target="_blank">

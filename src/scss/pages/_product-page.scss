@@ -290,6 +290,10 @@ body.single-product{
                     position: relative;
                     transition: background-color .3s;
 
+                    &.disabled{
+                        opacity: .4;
+                    }
+
                     span{
                         position: absolute;
                         left: 50%;
